@@ -13,6 +13,10 @@ import java.util.stream.Collectors;
 @WebServlet(urlPatterns = {"/patients"}, loadOnStartup = 1)
 public class MyServlet extends HttpServlet {
 
+//    public MyServlet() {
+//        new Post
+//    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HTML html = new HTML();
