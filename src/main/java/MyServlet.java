@@ -23,7 +23,7 @@ public class MyServlet extends HttpServlet {
 //
 //        html.addtoBody(new TagHeader());
         switch (req.getServletPath()){
-            case "/home" :
+            case "/" :
                 site Site = new site();
                 resp.getWriter().write(Site.toString());
                 break;
