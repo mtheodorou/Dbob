@@ -1,5 +1,6 @@
 
 import HTML.*;
+import website.Websites;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,10 +23,11 @@ public class MyServlet extends HttpServlet {
 //        HTML html = new HTML();
 //
 //        html.addtoBody(new TagHeader());
+        Websites websites = new Websites();
         switch (req.getServletPath()){
             case "/" :
                 site Site = new site();
-                resp.getWriter().write(Site.toString());
+                resp.getWriter().write(websites.get("index"));
                 break;
             case "/results":
                 results Results = new results();
