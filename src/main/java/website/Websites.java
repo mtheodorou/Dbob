@@ -39,13 +39,13 @@ public class Websites {
                 "          <div class=\"btn-toolbar\">\n" +
                 "            <a\n" +
                 "              class=\"btn btn-success my-2 mx-2 my-sm-0\"\n" +
-                "              href=\"/ExDB/signin\"\n" +
+                "              href=\"/Dbob/signin\"\n" +
                 "              role=\"button\"\n" +
                 "              >Sign in</a\n" +
                 "            >\n" +
                 "            <a\n" +
                 "              class=\"btn btn-success my-2 mx-2 my-sm-0\"\n" +
-                "              href=\"/ExDB/register\"\n" +
+                "              href=\"/Dbob/register\"\n" +
                 "              role=\"button\"\n" +
                 "              >Register</a\n" +
                 "            >\n" +
@@ -60,7 +60,7 @@ public class Websites {
                 "            <div class=\"card-body\">\n" +
                 "              <!-- Card for search utility -->\n" +
                 "              <h2 class=\"card-title mb-3\">Experimental database</h2>\n" +
-                "              <form action=\"/ExDB/results\" method=\"get\">\n" +
+                "              <form action=\"/Dbob/results\" method=\"get\">\n" +
                 "                <div class=\"form-row\">\n" +
                 "                  <div class=\"form-group col px-auto mt-2 mb-3\">\n" +
                 "                    <input name=\"search\" class=\"form-control\" type=\"search\" placeholder=\"What are you looking for?\" aria-label=\"Search\">\n" +
