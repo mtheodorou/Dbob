@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 
 
-@WebServlet(urlPatterns = {"/patients"}, loadOnStartup = 1)
+@WebServlet(urlPatterns = {"/"}, loadOnStartup = 1)
 public class MyServlet extends HttpServlet {
 
 //    public MyServlet() {
@@ -23,7 +23,7 @@ public class MyServlet extends HttpServlet {
 
         html.addtoBody(new TagHeader());
         if (req.getParameter("search") == null || req.getParameter("search").length() == 0) {
-            TagForm form = new TagForm("/Dbob/patients", "get");
+            TagForm form = new TagForm("/", "get");
             form.addChild(new TagInput("text", "search"));
 
             html.addtoBody(form);
