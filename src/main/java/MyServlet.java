@@ -33,7 +33,8 @@ public class MyServlet extends HttpServlet {
                 results Results = new results();
                 resp.getWriter().write(Results.toString());
                 break;
-
+            case "/signin":
+                resp.getWriter().write(websites.get("signin"));
         }
 //        if (req.getParameter("search") == null || req.getParameter("search").length() == 0) {
 //            TagForm form = new TagForm("/", "get");
