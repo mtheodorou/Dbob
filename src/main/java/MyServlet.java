@@ -19,19 +19,30 @@ public class MyServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HTML html = new HTML();
+//        HTML html = new HTML();
+//
+//        html.addtoBody(new TagHeader());
+        switch (req.getServletPath()){
+            case "/home" :
+                site Site = new site();
+                resp.getWriter().write(Site.toString());
+                break;
+            case "/results":
+                results Results = new results();
+                resp.getWriter().write(Results.toString());
+                break;
 
-        html.addtoBody(new TagHeader());
-        if (req.getParameter("search") == null || req.getParameter("search").length() == 0) {
-            TagForm form = new TagForm("/", "get");
-            form.addChild(new TagInput("text", "search"));
-
-            html.addtoBody(form);
-            resp.getWriter().write(html.toString());
-        } else {
-            html.addtoBody(new TagDiv(req.getParameter("search")));
-            resp.getWriter().write(html.toString());
         }
+//        if (req.getParameter("search") == null || req.getParameter("search").length() == 0) {
+//            TagForm form = new TagForm("/", "get");
+//            form.addChild(new TagInput("text", "search"));
+//
+//            html.addtoBody(form);
+//            resp.getWriter().write(html.toString());
+//        } else {
+//            html.addtoBody(new TagDiv(req.getParameter("search")));
+//            resp.getWriter().write(html.toString());
+//        }
         System.out.println(req.getServletPath());
     }
 
